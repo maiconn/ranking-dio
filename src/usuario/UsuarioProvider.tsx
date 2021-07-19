@@ -37,7 +37,8 @@ export function UsuarioProvider({children}: ProviderProps) {
     'stephanymberbel1400',
     'sthefanybarcelosantunes',
     'wesleymeireles_meireles',
-    'yanfhausmann'
+    'yanfhausmann',
+    'darkmesh'
   ];
 
   const [{usuarios}, action] = useReducer(usuarioReducer, usuarioInitialState);
