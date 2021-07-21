@@ -7,7 +7,6 @@ export const usuarioInitialState: UsuarioState = {
 export const usuarioReducer = (
   state: UsuarioState,
   action: UsuarioActions): UsuarioState => {
-  let _state = { ...state };
   switch(action.name){
     case "setListUsuario":
       return { ...state, usuarios: action.value };

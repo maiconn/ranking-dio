@@ -53,7 +53,7 @@ export function UsuarioProvider({children}: ProviderProps) {
       cache: 'default'
     };
     action({name: 'setListUsuario', value: []});
-    usuariosDIO.map((usuario, index) => {
+    usuariosDIO.map((usuario) => {
       fetch(`https://app.digitalinnovation.one/api/users/${usuario}/`, configInit)
         .then(res => res.json())
         .then(res => {

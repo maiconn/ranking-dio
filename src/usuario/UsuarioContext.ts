@@ -1,5 +1,5 @@
 import {createContext} from "react";
-import {Usuario, UsuarioContextValue} from "./Interfaces";
+import {UsuarioContextValue} from "./Interfaces";
 
 export const UsuarioContext = createContext<UsuarioContextValue>({
   usuarios: [],

@@ -11,32 +11,35 @@ function App() {
           <div className="App">
             <header className="App-header">
               <h1>Ranking DIO</h1>
-              {usuarios.map((item, idx) => (
-                <table>
-                  <tbody>
-                  <td>
-                    <tr>
-                      <h2>{idx + 1}º</h2>
-                    </tr>
-                  </td>
-                  <td>
-                    <tr>
-                      <img src={item.photo} width="70" height="80"/>
-                    </tr>
-                  </td>
-                  <td>
-                    <tr>
-                      <a href={item.perfil} target="_blank">{item.name}</a>
-                    </tr>
-                  </td>
-                  <td>
-                    <tr>
-                      <h3>{item.meta.experience} XP</h3>
-                    </tr>
-                  </td>
-                  </tbody>
-                </table>
-              ))}
+              <table>
+                <tbody>
+                {usuarios.map((item, idx) => (
+                  <div>
+                    <td>
+                      <tr>
+                        <h2>{("0" + (idx + 1)).slice(-2)}º</h2>
+                      </tr>
+                    </td>
+                    <td>
+                      <tr>
+                        {item.photo ? (<img src={item.photo}/>) : (<img
+                          src="https://media-exp1.licdn.com/dms/image/C4E0BAQGtRgpdb44oxg/company-logo_200_200/0?e=2159024400&v=beta&t=003zGHhfxuw6MdN6us3ZmimFn2uUSf0KrUWzr3ya5sA"/>)}
+                      </tr>
+                    </td>
+                    <td>
+                      <tr>
+                        <a href={item.perfil} target="_blank">{item.name}</a>
+                      </tr>
+                    </td>
+                    <td>
+                      <tr>
+                        <h3>{item.meta.experience} XP</h3>
+                      </tr>
+                    </td>
+                  </div>
+                ))}
+                </tbody>
+              </table>
             </header>
           </div>
         )}
