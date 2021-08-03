@@ -11,13 +11,20 @@ function App() {
           <div className="App">
             <header className="App-header">
               <h1>Ranking DIO</h1>
+                <p>Premiação 03/09 - Volcher iFood
+                  <ul>
+                    <li>1º lugar - R$50</li>
+                    <li>2º lugar - R$30</li>
+                    <li>3º lugar - R$20</li>
+                  </ul>
+                </p>
               <table>
                 <tbody>
                 {usuarios.map((item, idx) => (
                   <div>
                     <td>
                       <tr>
-                        <h2>{("0" + (idx + 1)).slice(-2)}º</h2>
+                        <h3>{("0" + (idx + 1)).slice(-2)}º</h3>
                       </tr>
                     </td>
                     <td>
@@ -28,12 +35,12 @@ function App() {
                     </td>
                     <td>
                       <tr>
-                        <a href={item.perfil} target="_blank">{item.name}</a>
+                        <a href={item.perfil} target="_blank"><b>{item.name}</b></a>
                       </tr>
                     </td>
                     <td>
                       <tr>
-                        <h3>{item.meta.experience} XP</h3>
+                        <h2>{item.meta.experience}XP</h2>
                       </tr>
                     </td>
                   </div>
