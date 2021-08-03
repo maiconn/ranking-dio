@@ -58,7 +58,7 @@ export function UsuarioProvider({children}: ProviderProps) {
           user.meta.experience = (parseInt(user.meta.experience) - usuario.xpDesconto) + '';
           //console.log(`{nome: '${usuario.nome}', xpDesconto: ${user.meta.experience}},`)
 
-          user.perfil = `https://web.digitalinnovation.one/users/${usuario}`;
+          user.perfil = `https://web.digitalinnovation.one/users/${usuario.nome}`;
           usuarios.push(user);
           usuarios.sort((obj1, obj2) => {
             const aExperience = parseInt(obj1.meta.experience);
