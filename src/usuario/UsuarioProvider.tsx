@@ -61,8 +61,13 @@ export function UsuarioProvider({children}: ProviderProps) {
           user.perfil = `https://web.digitalinnovation.one/users/${usuario}`;
           usuarios.push(user);
           usuarios.sort((obj1, obj2) => {
-            if (parseInt(obj1.meta.experience) > parseInt(obj2.meta.experience)) {
+            const aExperience = parseInt(obj1.meta.experience);
+            const bExperience = parseInt(obj2.meta.experience);
+
+            if (aExperience > bExperience) {
               return -1;
+            } else if(aExperience === bExperience) {
+              return (obj1.name < obj2.name) ? -1 : (obj1.name > obj2.name) ? 1 : 0;
             }
             return 0;
           });
