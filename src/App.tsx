@@ -11,7 +11,7 @@ function App() {
           <div className="App">
             <header className="App-header">
               <h1>Ranking DIO</h1>
-                <p>Premiação 03/09 - Volcher iFood
+                <p>Premiação 03/09 - Voucher iFood
                   <ul>
                     <li>1º lugar - R$50</li>
                     <li>2º lugar - R$30</li>
