@@ -36,6 +36,8 @@ export function UsuarioProvider({children}: ProviderProps) {
     {nome: 'jardon_m_martins', xpDesconto: 4665},
     {nome: 'denitborges', xpDesconto: 360},
     {nome: 'maicon_gerardi', xpDesconto: 1004},
+    {nome: 'flaviagoudinho39', xpDesconto: 0},
+    {nome: 'FRAGAEDUARDO6', xpDesconto: 0},
   ];
 
   const [{usuarios}, action] = useReducer(usuarioReducer, usuarioInitialState);
