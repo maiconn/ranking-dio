@@ -10,8 +10,6 @@ interface ProviderProps {
 export function UsuarioProvider({children}: ProviderProps) {
   const usuariosDIO = [
     {nome: 'bibianagabriela01', xpDesconto: 160},
-    {nome: 'juroque81', xpDesconto: 40},
-    {nome: 'killianms', xpDesconto: 0},
     {nome: 'stephanymberbel1400', xpDesconto: 320},
     {nome: 'lucas_roquef', xpDesconto: 1600},
     {nome: 'jairoderivia', xpDesconto: 480},
@@ -20,7 +18,6 @@ export function UsuarioProvider({children}: ProviderProps) {
     {nome: 'pokerzada12', xpDesconto: 1800},
     {nome: 'gabrieltogni', xpDesconto: 1080},
     {nome: 'gabriele_jacques', xpDesconto: 0},
-    {nome: 'sthefanybarcelosantunes', xpDesconto: 360},
     {nome: 'tiago_jb_1', xpDesconto: 400},
     {nome: 'gabri8014', xpDesconto: 0},
     {nome: 'brunapedagogia15', xpDesconto: 240},
@@ -32,12 +29,13 @@ export function UsuarioProvider({children}: ProviderProps) {
     {nome: 'wesleymeireles_meireles', xpDesconto: 1400},
     {nome: 'yanfhausmann', xpDesconto: 1320},
     {nome: 'aronfsouza', xpDesconto: 3600},
-    {nome: 'jamsghl', xpDesconto: 1120},
     {nome: 'jardon_m_martins', xpDesconto: 4665},
     {nome: 'denitborges', xpDesconto: 360},
     {nome: 'maicon_gerardi', xpDesconto: 1004},
     {nome: 'flaviagoudinho39', xpDesconto: 0},
     {nome: 'FRAGAEDUARDO6', xpDesconto: 0},
+    {nome: 'andregranemann', xpDesconto: 0},
+    {nome: 'matheus_camilo1617', xpDesconto: 0},
   ];
 
   const [{usuarios}, action] = useReducer(usuarioReducer, usuarioInitialState);
