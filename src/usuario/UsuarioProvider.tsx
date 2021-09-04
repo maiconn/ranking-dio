@@ -9,33 +9,34 @@ interface ProviderProps {
 
 export function UsuarioProvider({children}: ProviderProps) {
   const usuariosDIO = [
-    {nome: 'bibianagabriela01', xpDesconto: 160},
-    {nome: 'stephanymberbel1400', xpDesconto: 320},
-    {nome: 'lucas_roquef', xpDesconto: 1600},
     {nome: 'jairoderivia', xpDesconto: 480},
-    {nome: 'pro_goncalves', xpDesconto: 1644},
-    {nome: 'rafaela_contato2018', xpDesconto: 0},
-    {nome: 'pokerzada12', xpDesconto: 1800},
-    {nome: 'gabrieltogni', xpDesconto: 1080},
-    {nome: 'gabriele_jacques', xpDesconto: 0},
-    {nome: 'tiago_jb_1', xpDesconto: 400},
-    {nome: 'gabri8014', xpDesconto: 0},
-    {nome: 'brunapedagogia15', xpDesconto: 240},
-    {nome: 'joaovitor_jf42', xpDesconto: 200},
-    {nome: 'rodrigorosadossantos', xpDesconto: 200},
-    {nome: 'renan_vieira_88', xpDesconto: 1920},
-    {nome: 'lyn_mederos', xpDesconto: 80},
-    {nome: 'wesleymeireles_meireles', xpDesconto: 1400},
+    {nome: 'pro_goncalves', xpDesconto: 3894},
+    {nome: 'wesleymeireles_meireles', xpDesconto: 6690},
+    {nome: 'joaovitor_jf42', xpDesconto: 920},
+    {nome: 'renan_vieira_88', xpDesconto: 2000},
+    {nome: 'pokerzada12', xpDesconto: 1960},
+    {nome: 'bibianagabriela01', xpDesconto: 160},
+    {nome: 'aronfsouza', xpDesconto: 4100},
+    {nome: 'gabriele_jacques', xpDesconto: 80},
     {nome: 'yanfhausmann', xpDesconto: 1320},
-    {nome: 'aronfsouza', xpDesconto: 3600},
-    {nome: 'jardon_m_martins', xpDesconto: 4665},
+    {nome: 'rodrigorosadossantos', xpDesconto: 200},
+    {nome: 'gabri8014', xpDesconto: 0},
+    {nome: 'matheus_camilo1617', xpDesconto: 1040},
+    {nome: 'lyn_mederos', xpDesconto: 80},
     {nome: 'denitborges', xpDesconto: 360},
-    {nome: 'maicon_gerardi', xpDesconto: 1004},
-    {nome: 'flaviagoudinho39', xpDesconto: 0},
-    {nome: 'FRAGAEDUARDO6', xpDesconto: 0},
-    {nome: 'andregranemann', xpDesconto: 0},
-    {nome: 'matheus_camilo1617', xpDesconto: 0},
-    {nome: 'drawklein', xpDesconto: 0},
+    {nome: 'FRAGAEDUARDO6', xpDesconto: 120},
+    {nome: 'brunapedagogia15', xpDesconto: 360},
+    {nome: 'drawklein', xpDesconto: 360},
+    {nome: 'gabrieltogni', xpDesconto: 1160},
+    {nome: 'stephanymberbel1400', xpDesconto: 320},
+    {nome: 'tiago_jb_1', xpDesconto: 440},
+    {nome: 'rafaela_contato2018', xpDesconto: 0},
+    {nome: 'jardon_m_martins', xpDesconto: 4965},
+    {nome: 'andregranemann', xpDesconto: 80},
+    {nome: 'flaviagoudinho39', xpDesconto: 240},
+    {nome: 'lucas_roquef', xpDesconto: 4360},
+    {nome: 'guiuser1999', xpDesconto: 0},
+    {nome: 'rafael_dapper152', xpDesconto: 0},
   ];
 
   const [{usuarios}, action] = useReducer(usuarioReducer, usuarioInitialState);
@@ -55,8 +56,8 @@ export function UsuarioProvider({children}: ProviderProps) {
         .then(res => res.json())
         .then(res => {
           const user = res as Usuario;
+          console.log(`{nome: '${usuario.nome}', xpDesconto: ${user.meta.experience}},`)
           user.meta.experience = (parseInt(user.meta.experience) - usuario.xpDesconto) + '';
-          //console.log(`{nome: '${usuario.nome}', xpDesconto: ${user.meta.experience}},`)
 
           user.perfil = `https://web.digitalinnovation.one/users/${usuario.nome}`;
           usuarios.push(user);
