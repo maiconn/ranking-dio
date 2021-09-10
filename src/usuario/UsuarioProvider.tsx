@@ -25,8 +25,6 @@ export function UsuarioProvider({children}: ProviderProps) {
     {nome: 'lyn_mederos', xpDesconto: 80},
     {nome: 'denitborges', xpDesconto: 360},
     {nome: 'FRAGAEDUARDO6', xpDesconto: 120},
-    {nome: 'brunapedagogia15', xpDesconto: 360},
-    {nome: 'drawklein', xpDesconto: 360},
     {nome: 'gabrieltogni', xpDesconto: 1160},
     {nome: 'stephanymberbel1400', xpDesconto: 320},
     {nome: 'tiago_jb_1', xpDesconto: 440},
@@ -37,6 +35,8 @@ export function UsuarioProvider({children}: ProviderProps) {
     {nome: 'lucas_roquef', xpDesconto: 4360},
     {nome: 'guiuser1999', xpDesconto: 0},
     {nome: 'rafael_dapper152', xpDesconto: 0},
+    {nome: 'daniel_monroe_paz', xpDesconto: 0},
+    {nome: 'wagnereduardo34', xpDesconto: 0},
   ];
 
   const [{usuarios}, action] = useReducer(usuarioReducer, usuarioInitialState);
@@ -56,7 +56,7 @@ export function UsuarioProvider({children}: ProviderProps) {
         .then(res => res.json())
         .then(res => {
           const user = res as Usuario;
-          console.log(`{nome: '${usuario.nome}', xpDesconto: ${user.meta.experience}},`)
+          // console.log(`{nome: '${usuario.nome}', xpDesconto: ${user.meta.experience}},`)
           user.meta.experience = (parseInt(user.meta.experience) - usuario.xpDesconto) + '';
 
           user.perfil = `https://web.digitalinnovation.one/users/${usuario.nome}`;
