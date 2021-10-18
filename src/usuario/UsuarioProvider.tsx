@@ -35,7 +35,7 @@ export function UsuarioProvider({children}: ProviderProps) {
     {nome: 'stephanymberbel1400', xpDesconto: 320, xpAdd: 0},
     {nome: 'lucas_roquef', xpDesconto: 5120, xpAdd: 0},
     {nome: 'pro_goncalves', xpDesconto: 4094, xpAdd: 0},
-    {nome: 'jardon_m_martins', xpDesconto: 7345, xpAdd: 0},
+    {nome: 'jardon_m_martins', xpDesconto: 7345, xpAdd: 500},
     {nome: 'flaviagoudinho39', xpDesconto: 240, xpAdd: 0},
     {nome: 'renan_vieira_88', xpDesconto: 2000, xpAdd: 0},
   ];
