@@ -13,13 +13,13 @@ function App() {
               <h1> <img src={process.env.PUBLIC_URL + '/jornada-tech-e3e3e3.png'} alt="image" style={{
                 width: 250
               }}/></h1>
-              <p>Premiação <b>05/11</b> - Pix Maroto!
-                  <ul>
-                    <li>1º lugar - R$50</li>
-                    <li>2º lugar - R$30</li>
-                    <li>3º lugar - R$20</li>
-                  </ul>
-                </p>
+              {/*<p>Premiação <b>05/11</b> - Pix Maroto!*/}
+              {/*    <ul>*/}
+              {/*      <li>1º lugar - R$50</li>*/}
+              {/*      <li>2º lugar - R$30</li>*/}
+              {/*      <li>3º lugar - R$20</li>*/}
+              {/*    </ul>*/}
+              {/*  </p>*/}
               <table>
                 <tbody>
                 {usuarios.map((item, idx) => (
